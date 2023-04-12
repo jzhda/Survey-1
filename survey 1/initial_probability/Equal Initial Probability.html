@@ -1,0 +1,191 @@
+{{ block title }}
+Equal Initial Probability
+{{ endblock }}
+
+{{ block content }}
+<!-- still need to randomize things //-->
+<h3> Scenario 1 </h3>
+<p>
+    Box Yellow has the same probability as Green of being selected as the actual outcome. Then,
+    the initial probability of outcome Y equals 50%. Please, indicate the probability of this outcome
+    after observing different signals.
+</p>
+<br>
+<ul>
+    <li> The Yellow box has 15 yellow marbles and 5 green marbles, while the Green box has 15
+        green marbles and 5 yellow marbles. The next table summarizes this information:</li>
+</ul>
+<table border="1">
+    <tr>
+        <th>Box</th>
+        <th>Initial Probability of being selected</th>
+        <th>Number of yellow marbles</th>
+        <th>Number of green marbles</th>
+        <th>Total number of marbles</th>
+    </tr>
+    <tr>
+        <td>Yellow</td>
+        <td>50%</td>
+        <td>15</td>
+        <td>5</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Green</td>
+        <td>50%</td>
+        <td>15</td>
+        <td>5</td>
+        <td>20</td>
+    </tr>
+</table>
+<!-- insert table here // -->
+<ul>
+    <li> Then you observe two marbles coming from the same randomly selected box.
+        Each marble is put back in the box before the next marble is also randomly
+        selected. Indicate in the last column the probability of box Yellow being selected
+        to generate the sample you observe.</li>
+</ul>
+<!-- table w/ slider // -->
+<table border="1">
+    <tr>
+        <th>Sample of two Marbles</th>
+        <th>Number of yellow marbles</th>
+        <th>Indicate the probability of the sample coming from the Yellow box
+            (i.e. the final probability of outcome Y)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <img src="yellow.png">
+            <img src="yellow.png">
+        </td>
+        <td>2</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue1.innerText = this.value">
+                <p id="rangeValue1">50</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="green.png">
+            <img src="yellow.png">
+        </td>
+        <td>1</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue2.innerText = this.value">
+                <p id="rangeValue2">50</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="green.png">
+            <img src="green.png">
+        </td>
+        <td>0</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue3.innerText = this.value">
+                <p id="rangeValue3">50</p>
+            </div>
+        </td>
+    </tr>
+</table>
+</table>
+
+<h3> Scenario 2 </h3>
+<p>
+    Box Yellow has the same probability as Green of being selected as the actual outcome. Then, the initial probability
+    of outcome Y equals 50%. Please, indicate the probability of this outcome after observing different signals.
+</p>
+<br>
+<ul>
+    <li> •	The Yellow box has 19 yellow marbles and 1 green marble, while the Green box has 19 green marbles and 1 yellow marble. The next table summarizes this information:</li>
+</ul>
+<table border="1">
+    <tr>
+        <th>Box</th>
+        <th>Initial Probability of being selected</th>
+        <th>Number of yellow marbles</th>
+        <th>Number of green marbles</th>
+        <th>Total number of marbles</th>
+    </tr>
+    <tr>
+        <td>Yellow</td>
+        <td>50%</td>
+        <td>19</td>
+        <td>1</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Green</td>
+        <td>50%</td>
+        <td>1</td>
+        <td>19</td>
+        <td>20</td>
+    </tr>
+</table>
+<!-- insert table here // -->
+<ul>
+    <li> Then you observe two marbles coming from the same randomly selected box.
+        Each marble is put back in the box before the next marble is also randomly
+        selected. Indicate in the last column the probability of box Yellow being selected
+        to generate the sample you observe.</li>
+</ul>
+<!-- table w/ slider // -->
+<table border="1">
+    <tr>
+        <th>Sample of two Marbles</th>
+        <th>Number of yellow marbles</th>
+        <th>Indicate the probability of the sample coming from the Yellow box
+            (i.e. the final probability of outcome Y)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <img src="yellow.png">
+            <img src="yellow.png">
+        </td>
+        <td>2</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue4.innerText = this.value">
+                <p id="rangeValue4">50</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="green.png">
+            <img src="yellow.png">
+        </td>
+        <td>1</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue5.innerText = this.value">
+                <p id="rangeValue5">50</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="green.png">
+            <img src="green.png">
+        </td>
+        <td>0</td>
+        <td>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="50" step="0.1" oninput="rangeValue6.innerText = this.value">
+                <p id="rangeValue6">50</p>
+            </div>
+        </td>
+    </tr>
+</table>
+</table>
+
+{{ block content }}
+{{ next_button }}
+{{ endblock }}

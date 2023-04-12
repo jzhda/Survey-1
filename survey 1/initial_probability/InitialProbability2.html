@@ -1,0 +1,101 @@
+{{ block title }}
+Equal Initial Probability
+{{ endblock }}
+
+{{ block content }}
+<!-- still need to randomize things //-->
+<style>
+    table, td, th{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+</style>
+<h3> Scenario 2 </h3>
+<p>
+    Box Yellow has the same probability as Green of being selected as the actual outcome. Then, the initial probability
+    of outcome Y equals 50%. Please, indicate the probability of this outcome after observing different signals.
+</p>
+<br>
+<ul>
+    <li> •	The Yellow box has 19 yellow marbles and 1 green marble, while the Green box has 19 green marbles and 1 yellow marble. The next table summarizes this information:</li>
+</ul>
+<table border="1">
+    <tr>
+        <th>Box</th>
+        <th>Initial Probability of being selected</th>
+        <th>Number of yellow marbles</th>
+        <th>Number of green marbles</th>
+        <th>Total number of marbles</th>
+    </tr>
+    <tr>
+        <td>Yellow</td>
+        <td>50%</td>
+        <td>19</td>
+        <td>1</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Green</td>
+        <td>50%</td>
+        <td>1</td>
+        <td>19</td>
+        <td>20</td>
+    </tr>
+</table>
+<!-- insert table here // -->
+<ul>
+    <li> Then you observe two marbles coming from the same randomly selected box.
+        Each marble is put back in the box before the next marble is also randomly
+        selected. Indicate in the last column the probability of box Yellow being selected
+        to generate the sample you observe.</li>
+</ul>
+<!-- table w/ slider // -->
+<table border="1">
+    <tr>
+        <th>Sample of two Marbles</th>
+        <th>Number of yellow marbles</th>
+        <th>Indicate the probability of the sample coming from the Yellow box
+            (i.e. the final probability of outcome Y)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <img src="{{ static 'yellow.png' }}">
+            <img src="{{ static 'yellow.png' }}">
+        </td>
+        <td>2</td>
+        <td>
+            <div class="slider">
+               {{formfield 'final_probability_2_1'}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="{{ static 'green.png' }}">
+            <img src="{{ static 'yellow.png' }}">
+        </td>
+        <td>1</td>
+        <td>
+            <div class="slider">
+                {{formfield 'final_probability_2_2'}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="{{ static 'green.png' }}">
+            <img src="{{ static 'green.png' }}">
+        </td>
+        <td>0</td>
+        <td>
+            <div class="slider">
+                {{formfield 'final_probability_2_3'}}
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+<br>
+{{ next_button }}
+{{ endblock }}
